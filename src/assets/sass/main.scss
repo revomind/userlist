@@ -1,0 +1,28 @@
+@import '~bulma/bulma';
+
+.effect-fade-in-enter {
+  opacity: 0;
+}
+.effect-fade-in-enter-active {
+  transition: all .4s;
+}
+
+.effect-list-enter-active, .effect-list-leave-active {
+  transition: all .4s;
+}
+.effect-list-enter, .effect-list-leave-to {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.has-bg-white {
+  background-color: white;
+}
+
+.is-selected {
+  background-color: $info;
+}
+
+.is-borderless {
+  border: none !important;
+}
