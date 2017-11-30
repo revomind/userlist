@@ -101,7 +101,7 @@ export default {
       return filter(this.users, user =>
         find(pick(user, ['name', 'company', 'email', 'address', 'about', 'phone']),
           prop => {
-            var res = new RegExp(this.query, 'i').test(prop)
+            var res = new RegExp(this.query.replace(/[.?*+^$[\]\\(){}|-]/g, '\\$&'), 'i').test(prop)
             if (res) this.visible.push(user.index)
             return res
           }
